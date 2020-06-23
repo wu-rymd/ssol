@@ -1,0 +1,123 @@
+// container
+.App > *:not(:first-of-type):not(#campus-life) {
+    margin: 1rem 1rem;
+    padding: 1rem;
+    border: 5px solid #e8e8e8;
+    border-radius: 5px;
+    display: flex;
+
+    #profile, #overview, #bill-summary {
+        padding: 1rem;
+        background-color: #f0f0f0;
+        width: 30%;
+
+        #user-info, #academic-info {
+            display: flex;
+            img { max-height: 10vw; max-width: 10vw; }
+            #bio { padding-left: 1rem; }
+        }
+
+        .balance {
+            font-size: 4vmin;
+            font-weight: bold;
+            margin-bottom: 4vmin;
+            text-align: right;
+        }
+
+        .advisor,
+        #cumulative-gpa, .term-gpa,
+        #career, #grade-level, #graduation-term { float: right; }
+    }
+
+    .portal {
+        padding: 1rem;
+        background-color: white;
+        width: 100%;
+
+        .portal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            font-weight: bold;
+        }
+
+        .portal-content {
+            padding-bottom: 2rem;
+            td { font-size: small; }
+        }
+
+        .aid-amount { float: right; }
+        .aid-highlight, .aid-net {
+            padding: 0.325rem;
+        }
+        .aid-highlight { background-color: whitesmoke; }
+        .aid-net { background-color: gainsboro; }
+        .on-campus-empoly-apply { float: right; }
+    }
+}
+
+#academics {
+    // not last elem
+    :not(#schedule) > .portal-content {
+        padding-bottom: 4rem;
+    }
+}
+
+#finances {
+    // not last elem
+    :not(#on-campus-employment) > .portal-content {
+        padding-bottom: 4rem;
+    }
+}
+
+#campus-life {
+    margin: 1rem;
+    padding: 3rem 3rem;
+    border: 5px solid #e8e8e8;
+    border-radius: 5px;
+
+    .portal-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        font-weight: bold;
+    }
+
+    :not(#community-events) > .portal-content {
+        padding-bottom: 4rem;
+    }
+
+    .campus-life-info { float: right; }
+}
+
+@media(min-width: 600px) {
+    #campus-life { padding: 3rem 5rem; }
+}
+
+@media(min-width: 800px) {
+    #campus-life { padding: 3rem 10rem; }
+}
+
+@media(min-width: 1000px) {
+    #campus-life { padding: 3rem 15rem; }
+}
+
+@media(min-width: 1200px) {
+    #campus-life { padding: 3rem 20rem; }
+}
+
+@media(min-width: 1500px) {
+    #campus-life { padding: 3rem 25rem; }
+}
+
+@media (min-width: 1700px) {
+    .App > *:not(:first-of-type) {
+        #profile, #overview, #bill-summary {
+            width: 25%;
+        }
+    }
+    #campus-life { padding: 3rem 35rem; }
+}
+
+sup { vertical-align: bottom; }
+.placeholder { vertical-align: top; }
